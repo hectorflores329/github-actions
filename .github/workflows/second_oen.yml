@@ -1,13 +1,13 @@
 name: Set some information
 
-on: push
+on:
   schedule:
     # * es un caracter especial en YAML, asique se usa un string
     - cron:  '*/1 * * * *'
 
 jobs:
   my-job:
-    name: My Job
+    name: This is a test
     runs-on: ubuntu-latest
     steps:
     - name: Print a greeting
