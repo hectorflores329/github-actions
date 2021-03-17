@@ -1,19 +1,6 @@
-name: Infomration
+name: Infoimation
 
 on:
   schedule:
     # * es un caracter especial en YAML, asique se usa un string
     - cron:  '*/1 * * * *'
-
-jobs:
-  my-job:
-    name: This is a test
-    runs-on: ubuntu-latest
-    steps:
-    - name: Print a greeting
-      env:
-        MY_VAR: Hi there! My name is
-        FIRST_NAME: Hector
-        LAST_NAME: Flores
-      run: |
-        echo $MY_VAR $FIRST_NAME $LAST_NAME.
