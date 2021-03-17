@@ -1,4 +1,4 @@
-name: Information
+name: New test
 
 on:
   schedule:
@@ -6,11 +6,12 @@ on:
     - cron:  '*/1 * * * *'
 
 jobs:
-  build_check:
-    name: Checks typings and building
+  my-job:
+    name: This is a test
     runs-on: ubuntu-latest
-    env:
-      CI: true
-
-    run: |
-        echo $CI
+    steps:
+    - name: Print a greeting
+      env:
+        MY_VAR: This is a new variable.
+      run: |
+        echo $MY_VAR
