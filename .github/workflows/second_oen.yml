@@ -1,6 +1,9 @@
-name: Greeting from Mona
+name: Set some information
 
 on: push
+  schedule:
+    # * es un caracter especial en YAML, asique se usa un string
+    - cron:  '*/1 * * * *'
 
 jobs:
   my-job:
@@ -10,8 +13,7 @@ jobs:
     - name: Print a greeting
       env:
         MY_VAR: Hi there! My name is
-        FIRST_NAME: Mona
-        MIDDLE_NAME: The
-        LAST_NAME: Octocat
+        FIRST_NAME: Hector
+        LAST_NAME: Flores
       run: |
-        echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+        echo $MY_VAR $FIRST_NAME $LAST_NAME.
