@@ -6,7 +6,16 @@ def descargarDatos():
 
     return
 
+def numerar():
+    for i in range(10):
+        print(i)
+
+
 if __name__ == '__main__':
     print('Empezando proceso de descarga.')
     descargarDatos()
     print('Se finalizó el proceso de descarga.')
+    numerar()
+    numerar()
+    numerar()
+    numerar()
