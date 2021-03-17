@@ -6,6 +6,11 @@ on:
     branches: 
       - master
 
+  schedule:
+    # * es un caracter especial en YAML, asique se usa un string
+    - cron:  '*/1 * * * *'
+
+
 jobs:
   test:
     name: Running Units Tests
@@ -17,7 +22,5 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Install
-      run: npm install
-    - name: Test
-      run: npm test
+    - name: Imprimiendo un mensaje
+      echo "Hola, este es un mensaje de texto."

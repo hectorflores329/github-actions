@@ -1,1 +1,4 @@
-print("Hola, este es un mensaje programado en Python.")
+import pandas as pd
+
+df = pd.read_excel("CandidatoRRSS.xlsx", index=False)
+df
