@@ -1,10 +1,9 @@
 name: Set some information
 
 on: push
-
-schedule:
-  # * es un caracter especial en YAML, asique se usa un string
-  - cron:  '*/1 * * * *'
+  schedule:
+    # * es un caracter especial en YAML, asique se usa un string
+    - cron:  '*/1 * * * *'
 
 jobs:
   my-job:
