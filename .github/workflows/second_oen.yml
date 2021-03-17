@@ -1,17 +1,17 @@
-name: New test
+name: Greeting from Mona
 
-on:
-  schedule:
-    # * es un caracter especial en YAML, asique se usa un string
-    - cron:  '*/1 * * * *'
+on: push
 
 jobs:
   my-job:
-    name: This is a test
+    name: My Job
     runs-on: ubuntu-latest
     steps:
     - name: Print a greeting
       env:
-        MY_VAR: This is a new variable.
+        MY_VAR: Hi there! My name is
+        FIRST_NAME: Mona
+        MIDDLE_NAME: The
+        LAST_NAME: Octocat
       run: |
-        echo $MY_VAR
+        echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
