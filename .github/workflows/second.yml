@@ -1,0 +1,27 @@
+# Give the workflow a name. 
+name: Nightly Build 2
+
+# Trigger Workflow every midnight UTC
+
+on:
+    schedule:
+      - cron: '* * * * *'
+    workflow_dispatch: 
+#workflow_dispatch helps run workflow anytime with a single click. 
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    name: Scheduling
+    # make sure to run this action in Linux env (say ubuntu)
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - name: Print a greeting
+      env:
+        MY_VAR: Hi there! My name is
+        FIRST_NAME: Mona
+        MIDDLE_NAME: The
+        LAST_NAME: Octocat
+      run: |
+        echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
