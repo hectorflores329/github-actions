@@ -1,6 +1,16 @@
-name: Infoimation
+name: Information
 
 on:
   schedule:
     # * es un caracter especial en YAML, asique se usa un string
     - cron:  '*/1 * * * *'
+
+jobs:
+  build_check:
+    name: Checks typings and building
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+
+    run: |
+        echo $CI
